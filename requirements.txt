@@ -1,0 +1,9 @@
+zenml
+openai
+pandas
+smolagents[telemetry]
+opentelemetry-sdk 
+opentelemetry-exporter-otlp 
+openinference-instrumentation-smolagents
+langchain-core
+langchain-community
