@@ -116,3 +116,25 @@ STRATEGY_PROMPT = (
     " - Identify potential misalignments, strengths, and areas for improvement in the strategic direction.\n"
     " - Provide a detailed strategy evaluation report with recommendations."
 )
+
+EXTRACTION_SYSTEM_PROMPT = """
+    You are a financial analyst expert at extracting structured information from business analysis reports.
+    
+    Your task is to extract financial metrics, competitor information, contradictions, and context from the provided business analysis text.
+    
+    Guidelines:
+    - Extract financial metrics with proper formatting (include units like million, %, etc.)
+    - Identify competitor companies and competitive landscape insights
+    - Note any contradictions, validation needs, or analytical gaps mentioned
+    - Preserve important contextual information about the company
+    - If a metric is not found, leave it as null
+    - Be precise and only extract information that is explicitly stated
+    """
+    
+EXTRACTION_USER_PROMPT = ("""
+Please extract structured information from this business analysis:
+
+{input_text}
+
+Extract the financial metrics, competitor analysis, contradictions/validation needs, and key context according to the specified structure.
+""")
