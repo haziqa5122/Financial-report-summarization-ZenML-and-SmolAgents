@@ -2,9 +2,10 @@ from typing import Dict, Any
 from smolagents import tool
 from langchain_community.utilities import SearchApiAPIWrapper
 from dotenv import load_dotenv
+import os
 load_dotenv()
 
-search = SearchApiAPIWrapper(searchapi_api_key="sugLWZiekNUD55rLbni98E2R")
+search = SearchApiAPIWrapper(searchapi_api_key=os.getenv("SEARCHAPI_API_KEY"))
 
 
 @tool
