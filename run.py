@@ -37,9 +37,7 @@ def main(file_path: str):
     document_processing_pipeline(file_path=file_path)
     company_data = Client().get_artifact_version("structured_dataset").load()
     logger.info(f"Running Agent Analysis of the company's data")
-    print(company_data["0"])
     agent_analysis_pipeline(company_data["0"])
-    
     metric_result = Client().get_artifact_version("metric_result").load()
     context_result = Client().get_artifact_version("context_result").load()
     competitor_result = Client().get_artifact_version("competitor_result").load()
